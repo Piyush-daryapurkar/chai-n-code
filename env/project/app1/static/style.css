@@ -1,0 +1,13 @@
+*{
+    background-color: rgb(247, 245, 250);
+}
+h2{
+    color: black;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: green;
+    align-items: center;
+    justify-content: center;
+}
