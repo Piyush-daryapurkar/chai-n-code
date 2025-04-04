@@ -1,0 +1,43 @@
+{% extends "nav.html" %}
+{% load static %}
+
+{% block content %}
+
+<table border=" ">
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Contect</th>  
+                <th>edit</th>
+                <th>delete</th>
+            </tr>  
+            {% for i in read  %}
+
+            <tr>
+              <td>{{i.id}}</td>
+              <td>{{i.name}}</td>
+              <td>{{i.email}}</td>
+              <td>{{i.contact}}</td>
+              <td><button onclick="window.location.href='{% url "edit_data" %}?id={{i.id}}'">Edit</button></td>
+              <td>
+                <button onclick="confirmDelete('{{ i.id }}')">Delete</button>
+            </td>
+              </td>
+
+
+            </tr>
+
+            <script>
+                function confirmDelete(id) {
+                    if (confirm("Are you sure you want to delete this record?")) {
+                        window.location.href = '{% url "delete_data" %}?id=' + id;
+                    }
+                }
+            </script>
+  
+       
+
+{% endfor %} 
+
+{% endblock content %} 
