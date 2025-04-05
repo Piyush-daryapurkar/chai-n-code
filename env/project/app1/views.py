@@ -29,23 +29,49 @@ def Add_some(req):
         return render(req,'add.html',{'form':form})
  
 
-def Edit(req):
-    user_id=req.GET.get("id")
-    user=Read.objects.get(id=user_id)
-    if req.method=="POST":
-        form=Add(req.POST,instance=user)
-        if form.is_valid():
-            form.save()
-            return redirect("read_data")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def Edit(req):
+#     user_id=req.GET.get("id")
+#     user=Read.objects.get(id=user_id)
+#     if req.method=="POST":
+#         form=Add(req.POST,instance=user)
+#         if form.is_valid():
+#             form.save()
+#             return redirect("read_data")
         
-    else:
-        form=Add(instance=user)
-    return render(req,'edit.html',{'form':form})    
+#     else:
+#         form=Add(instance=user)
+#     return render(req,'edit.html',{'form':form})    
 
 
 
-def Delete(req):
-    user_id = req.GET.get("id")
-    user = get_object_or_404(Read, id=user_id)
-    user.delete()
-    return redirect("read_data")
+# def Delete(req):
+#     user_id = req.GET.get("id")
+#     user = get_object_or_404(Read, id=user_id)
+#     user.delete()
+#     return redirect("read_data")
