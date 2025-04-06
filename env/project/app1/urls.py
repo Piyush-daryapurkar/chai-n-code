@@ -7,10 +7,5 @@ urlpatterns = [
    
     path('read/',Readme,name='read_data'),
     path('add/',Add_some,name="add_data"),
-    path('add/',Add_some,name="add_data"),
-
-  
-
-
-
 ]
+
